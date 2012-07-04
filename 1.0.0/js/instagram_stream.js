@@ -245,6 +245,7 @@ InstagramStream.prototype.createHeader = function() {
 		es.feedType = "home";
 		es.loadMore(true);
 		es.updateStreamSetting();
+		jQuery(".hs_dropdown>div").hide();
 		mixpanel.track('home', {
 			'app' : 'instagram',
 			'ui' : 'header',
@@ -255,7 +256,8 @@ InstagramStream.prototype.createHeader = function() {
 	header.on("popular", function() {
 		es.feedType = "popular";
 		es.loadMore(true);
-		es.updateStreamSetting();		
+		es.updateStreamSetting();
+		jQuery(".hs_dropdown>div").hide();
 		mixpanel.track('popular', {
 			'app' : 'instagram',
 			'ui' : 'header',
@@ -267,6 +269,7 @@ InstagramStream.prototype.createHeader = function() {
 		es.feedType = "mine";
 		es.loadMore(true);
 		es.updateStreamSetting();		
+		jQuery(".hs_dropdown>div").hide();
 		mixpanel.track('mine', {
 			'app' : 'instagram',
 			'ui' : 'header',
@@ -277,7 +280,8 @@ InstagramStream.prototype.createHeader = function() {
 	header.on("like", function() {
 		es.feedType = "likes";
 		es.loadMore(true);
-		es.updateStreamSetting();		
+		es.updateStreamSetting();
+		jQuery(".hs_dropdown>div").hide();
 		mixpanel.track('like', {
 			'app' : 'instagram',
 			'ui' : 'header',
