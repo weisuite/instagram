@@ -230,7 +230,7 @@ InstagramStream.prototype.createHeader = function() {
 	var topbarspace = weisuite.html(jQuery("div.hs_topBarSpace",jQuery(this.config.type.template)).get(0));
 	var header = weisuite.streamHeader();
 	this.header = header;
-	topbar.add(header, jQuery("div.hs_content").get(0));
+	topbar.add(header, jQuery("div.hs_content",jQuery(topbar.asElement())).get(0));
 	jQuery(header.asElement()).addClass("hs_content");
 	if (es.connected) {
 		header.button("home", "Home", "ws_icon19 home-grey-20x20");
