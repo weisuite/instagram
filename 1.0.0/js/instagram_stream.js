@@ -226,8 +226,8 @@ InstagramStream.prototype.getAjaxSetting = function(setting) {
 
 InstagramStream.prototype.createHeader = function() {
 	var es = this;
-	var topbar = weisuite.html(jQuery("div.hs_topBar").get(0),jQuery(this.config.type.template));
-	var topbarspace = weisuite.html(jQuery("div.hs_topBarSpace").get(0),jQuery(this.config.type.template));
+	var topbar = weisuite.html(jQuery("div.hs_topBar",jQuery(this.config.type.template)).get(0));
+	var topbarspace = weisuite.html(jQuery("div.hs_topBarSpace",jQuery(this.config.type.template)).get(0));
 	var header = weisuite.streamHeader();
 	this.header = header;
 	topbar.add(header, jQuery("div.hs_content").get(0));
