@@ -352,7 +352,7 @@ InstagramMediaStream.prototype.popupUser = function(name) {
 }
 
 InstagramMediaStream.prototype.createFooter = function(hasHeader) {
-	var more = weisuite.html(jQuery("div.hs_moreMessages").get(0));
+	var more = weisuite.html(jQuery("div.hs_moreMessages",jQuery(this.config.type.template)).get(0));
 	this.stream.footer(more, true);
 	return this;
 }
