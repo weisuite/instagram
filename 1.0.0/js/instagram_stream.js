@@ -36,12 +36,22 @@ function onModuleLoad(module) {
 								is.hsp.updatePlacementSubtitle("("
 										+ users.data.username + ")");
 							}
-						}));				
+						}));
+				mixpanel.track('connected', {
+					'app' : 'instagram',
+					'ui' : 'landing',
+					'consumer' : es.context.consumer.id
+				});					
 			}
 		} else {
 			// clean the email
 			is.hsp.updatePlacementSubtitle("Instagram");
 			is.connect();
+			mixpanel.track('connect', {
+				'app' : 'instagram',
+				'ui' : 'landing',
+				'consumer' : es.context.consumer.id
+			});			
 		}
 		is.onReady();
 	}
