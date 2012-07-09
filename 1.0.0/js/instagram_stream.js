@@ -40,7 +40,7 @@ function onModuleLoad(module) {
 				mixpanel.track('connected', {
 					'app' : 'instagram',
 					'ui' : 'landing',
-					'consumer' : es.context.consumer.id
+					'consumer' : is.context.consumer.id
 				});					
 			}
 		} else {
@@ -50,7 +50,7 @@ function onModuleLoad(module) {
 			mixpanel.track('connect', {
 				'app' : 'instagram',
 				'ui' : 'landing',
-				'consumer' : es.context.consumer.id
+				'consumer' : is.context.consumer.id
 			});			
 		}
 		is.onReady();
