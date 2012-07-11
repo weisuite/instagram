@@ -184,8 +184,8 @@ InstagramStream.prototype.getFeedAjaxSetting = function(data) {
 }
 InstagramStream.prototype.connect = function() {
 	var setting = {
-		width : 950,
-		height : 650,
+		width : 800,
+		height : 600,
 		text : 'Connect with Instagram',
 		logo : '/static/weisuite/1.01/img/instagram_72x72.png',
 		consumer : this.context.consumer,
