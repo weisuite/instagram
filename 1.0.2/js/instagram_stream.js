@@ -90,5 +90,4 @@ function onModuleLoad(module){
 	});                     
 	
 	$.click($.query('.stream .topbar .header .toolbar a[data-name=home]'));	    
-	});	
 }
